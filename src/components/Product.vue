@@ -2,7 +2,7 @@
     <div>
   <b-card
     title="Card Title"
-    img-src="https://picsum.photos/600/300/?image=25"
+    v-bind:img-src="imgsrc"
     img-alt="Image"
     img-top
     tag="article"
@@ -10,10 +10,11 @@
     class="mb-2"
   >
     <b-card-text>
-      Some quick example text to build on the card title and make up the bulk of the card's content.
+      {{ text }}
+      {{ imgsrc }}
     </b-card-text>
 
-    <b-button href="#" variant="primary">Go somewhere</b-button>
+    <b-button href="#" variant="primary">放入購物車</b-button>
   </b-card>
 </div>
 </template>
@@ -22,7 +23,9 @@
 export default {
   name: 'Product',
   props: {
-    msg: String
+    msg: String,
+    text: String,
+    imgsrc : String
   }
 }
 </script>
@@ -44,3 +47,6 @@ a {
   color: #42b983;
 }
 </style>
+
+<!-- 註：v-bind:class="{'class 名稱' : vue 屬性名稱}"參考書p.4-28，指定被綁定時的處理動作-->
+<!-- 註：props目的在傳遞資料值 用陣列取值 參考書p.4-39-->

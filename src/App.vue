@@ -2,21 +2,16 @@
   <div class="container" id="app">
     <img alt="Vue logo" src="./assets/logo.png">   
       <product-list></product-list>
-    </div>  
-
-    
+    </div>      
 </template>
 
 <script>
-
-
 import ProductList from './Pages/ProductList'
 
 
 export default {
   name: 'App',
-  components: {
-    
+  components: {    
     
     ProductList
   }
